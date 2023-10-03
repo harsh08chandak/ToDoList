@@ -63,17 +63,27 @@ form{
     color: red;
     position: $pos-abs;
     left:57%;
+    display:$dis-flex;
+    @include mobile(){
+        left:79% !important;
+    }
 }
 .fa-check{
     color: lightgreen;
     position: $pos-abs;
-   left:55%;
+   left:54%;
+   @include mobile(){
+    left:68% !important;
 }
-ol{
+}
+ul{
+    list-style:none;
     color: $pricol;
+    display: block;
+    text-align: start;
 }
 #button{
-    @include flexcenter();
+    // @include flexcenter();
     display: block;
     border: none;
     padding: 3px;
@@ -88,7 +98,15 @@ ol{
     &:hover{
         background-color: $pricol;
     }
+
+    @include mobile(){
+        display: block;
+   position: relative;
+   left:38%
+    }
 }
+
+
 
 
 

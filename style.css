@@ -46,24 +46,33 @@ form input {
   color: red;
   position: absolute;
   left: 57%;
+  display: flex;
+}
+@media (max-width: 800px) {
+  .fa-trash {
+    left: 79% !important;
+  }
 }
 
 .fa-check {
   color: lightgreen;
   position: absolute;
-  left: 55%;
+  left: 54%;
+}
+@media (max-width: 800px) {
+  .fa-check {
+    left: 68% !important;
+  }
 }
 
-ol {
+ul {
+  list-style: none;
   color: #ffc107;
+  display: block;
+  text-align: start;
 }
 
 #button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
   display: block;
   border: none;
   padding: 3px;
@@ -76,4 +85,11 @@ ol {
 }
 #button:hover {
   background-color: #ffc107;
+}
+@media (max-width: 800px) {
+  #button {
+    display: block;
+    position: relative;
+    left: 38%;
+  }
 }/*# sourceMappingURL=style.css.map */
