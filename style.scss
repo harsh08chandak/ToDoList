@@ -1,0 +1,95 @@
+@import './variables';
+
+@mixin mobile()
+{
+@media(max-width:$mobile){
+@content;
+}
+    
+}
+
+@mixin flexcenter{
+    display: flex;
+    justify-content: $cen-pos;
+    align-items: $cen-pos;
+    text-align: $cen-pos;
+    flex-direction: column;
+}
+
+body{
+    background-color: $bg;
+}
+.container {
+    width: 20%;
+    margin: auto;
+    padding:9px ;
+    border: 1px solid white;
+    border-radius:20px ;
+
+    h2{
+        color: $pricol;
+        text-align: $cen-pos;
+    }
+
+    @include mobile()
+    {
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    p{
+        color: $formtitle-color;
+        display: block;
+        text-align: $cen-pos;
+     }
+}
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    input{
+        padding: 8px;
+        text-align: $cen-pos;
+    margin: 5px;
+    border: none;
+    border-radius: $bor-rad;
+    font-family: $font;
+    }
+   
+}
+.fa-trash{
+    color: red;
+    position: $pos-abs;
+    left:57%;
+}
+.fa-check{
+    color: lightgreen;
+    position: $pos-abs;
+   left:55%;
+}
+ol{
+    color: $pricol;
+}
+#button{
+    @include flexcenter();
+    display: block;
+    border: none;
+    padding: 3px;
+    margin: 6px;
+    width: 80px;
+    border-radius: $bor-rad;
+    position: $pos-abs;
+    left:47%;
+    border: 3px solid #000000;
+    
+
+    &:hover{
+        background-color: $pricol;
+    }
+}
+
+
+
+
